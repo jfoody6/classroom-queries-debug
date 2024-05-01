@@ -4,27 +4,19 @@
 
 <hr>
 
-<form action="/insert_course" method="post">
+<form action="/create_course" method="post">
   <div>
-    <label for="title_box">
-      Title
-    </label>
-
-    <input type="text" id="title_b" name="q_title">
+    <label for="title_box">Title</label>
+    <input type="text" id="title_box" name="query_title">
   </div>
 
   <div>
-    <label for="term_offered_box">
-      Term offered
-    </label>
-
+    <label for="term_offered_box">Term offered</label>
     <input type="text" id="term_offered_box" name="query_term">
   </div>
 
   <div>
-    <label for="department_id_box">
-      Department
-    </label>
+    <label for="department_id_box">Department</label>
 
     <select id="department_id_box" name="query_department_id">
       <% Department.order({ :name => :asc }).each do |a_department| %>
