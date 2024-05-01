@@ -4,17 +4,15 @@ Rails.application.routes.draw do
   #------------------------------
   # Department routes
 
-  get("/departments", { :controller => "department", :action => "index" })
+  get("/departments", { :controller => "departments", :action => "index" })
   
   get("/departments/:path_id", { :controller => "departments", :action => "show" })
 
   post("/insert_department", { :controller => "departments", :action => "create" })
-
-  get("/departments", { :controller => "departments", :action => "index" })
   
   post("/modify_department/:path_id", { :controller => "departments", :action => "update" })
 
-  get("/delete_department/:path_id", { :controller => "departments", :action => "destroy" })
+  post("/delete_department/:path_id", { :controller => "departments", :action => "destroy" })
 
   #------------------------------
   # Course routes
@@ -24,8 +22,6 @@ Rails.application.routes.draw do
   get("/courses/:path_id", { :controller => "courses", :action => "show" })
 
   get("/insert_course", { :controller => "courses", :action => "create" })
-
-  get("/courses", { :controller => "courses_controller", :action => "index" })
   
   get("/modify_course/:path_id", { :controller => "courses", :action => "update" })
 
